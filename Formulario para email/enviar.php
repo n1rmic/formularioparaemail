@@ -20,14 +20,14 @@ if((isset($_POST['email']) && !empty(trim($_POST['email']))) && (isset($_POST['m
 
 	$mail = new PHPMailer();
 	$mail->isSMTP();
-	$mail->Host = 'smtp-mail.outlook.com';
+	$mail->Host = 'smtp-mail.outlook.com'; 
 	$mail->SMTPAuth = true;
-	$mail->Username = 'biomarsolucoesmaritimas@outlook.com';
-	$mail->Password = 'Biomar2021';
+	$mail->Username = 'seuemail@provedor';
+	$mail->Password = 'senhadoemail';
 	$mail->Port = 587;
 
-	$mail->setFrom('biomarsolucoesmaritimas@outlook.com');
-	$mail->addAddress('biomarsolucoesmaritimas@outlook.com');
+	$mail->setFrom('seuemail@provedor');
+	$mail->addAddress('seuemail@provedor');
 
 	$mail->isHTML(true);
 	$mail->Subject = $assunto;
